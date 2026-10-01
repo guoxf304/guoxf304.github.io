@@ -63,32 +63,46 @@ function setupSmoothScroll() {
 }
 
 function setupNavHighlight() {
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+    const sections = document.querySelectorAll('section[id]:not(.hidden)');
     const nav = document.querySelector('.top-nav');
 
     if (!navLinks.length || !sections.length || !nav) {
         return;
     }
 
-    window.addEventListener('scroll', () => {
-        let current = '';
+    const sectionToNav = {
+        homepage: 'about',
+        'research-thrust': 'about',
+        publications: 'publications',
+        educations: 'educations'
+    };
+
+    const updateActiveNav = () => {
+        let currentSection = 'homepage';
         const navHeight = nav.offsetHeight;
 
         sections.forEach(section => {
             if (window.pageYOffset >= section.offsetTop - navHeight - 100) {
-                current = section.getAttribute('id');
+                currentSection = section.getAttribute('id');
             }
         });
+
+        const currentNav = window.pageYOffset < 40
+            ? 'homepage'
+            : (sectionToNav[currentSection] || currentSection);
 
         navLinks.forEach(link => {
             link.classList.remove('active');
             const target = (link.getAttribute('href') || '').replace('#', '');
-            if (target === current || (current === 'homepage' && target === 'about')) {
+            if (target === currentNav) {
                 link.classList.add('active');
             }
         });
-    });
+    };
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
 }
 
 function loadNews() {

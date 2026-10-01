@@ -38,9 +38,16 @@ a {
 }
 
 .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.nav-links > li {
+    margin: 0;
 }
 
 .nav-item {
@@ -70,6 +77,10 @@ a {
 .nav-item:hover::after,
 .nav-item.active::after {
     width: 100%;
+}
+
+.mobile-nav-item.active {
+    color: #1e293b;
 }
 
 .profile-image-container {
