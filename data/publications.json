@@ -15,5 +15,36 @@
       { "text": "arXiv", "link": "https://arxiv.org/abs/2609.21347" },
       { "text": "Code", "link": "https://github.com/guoxf304/CubeSplat" }
     ]
+  },
+  {
+    "title": "PanoGS-SLAM: Panoramic 3D Gaussian Splatting SLAM",
+    "authors": "Yongqi Mao, Hao Shi, Yufan Zhang, Zhonghua Yi, <strong>Xiangfei Guo</strong>, Kaiwei Wang",
+    "type": "preprint",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 2,
+    "venue": "arXiv",
+    "year": "2026",
+    "highlight": "",
+    "thumbnail": "assets/publications/placeholder/PanoGS-SLAM.png",
+    "tags": [
+      { "text": "arXiv", "link": "https://arxiv.org/abs/2609.17387" }
+    ]
+  },
+  {
+    "title": "Experimental probe of band structures of bilayer valley photonic crystals",
+    "authors": "<strong>Xiang-Fei Guo</strong>*, Jian-Wei Liu*, Hong-Xiang Chen, Fu-Long Shi, Xiao-Dong Chen, Jian-Wen Dong",
+    "type": "accepted",
+    "isFirstAuthor": true,
+    "showOnHomepage": true,
+    "featuredOrder": 3,
+    "venue": "Physical Review B",
+    "year": "2025",
+    "highlight": "",
+    "thumbnail": "assets/publications/placeholder/VPCs.png",
+    "tags": [
+      { "text": "Paper", "link": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.024203" },
+      { "text": "arXiv", "link": "https://arxiv.org/abs/2411.11381" }
+    ]
   }
 ]
