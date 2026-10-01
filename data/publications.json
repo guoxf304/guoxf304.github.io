@@ -1,48 +1,18 @@
 [
   {
-    "title": "AcaNova-X: A Modern and Elegant Academic Website Template",
-    "displayTitle": "AcaNova-X: A Modern Academic Homepage with Featured Publications and Demo Preview Support",
-    "authors": "<strong>Your Name</strong>*, Collaborator A*, Collaborator B",
+    "title": "Cube-Splat: High-Fidelity 360° Gaussian Splatting SLAM via Cubemap Factorization and Adjoint-Consistent Optimization",
+    "authors": "<strong>Xiangfei Guo</strong>*, Hao Shi*, Yufan Zhang, Zhonghua Yi, Yongqi Mao, Xiaoting Yin, Kaiwei Wang",
     "type": "accepted",
     "isFirstAuthor": true,
     "showOnHomepage": true,
     "featuredOrder": 1,
-    "venue": "CVPR 2025",
-    "year": "2025",
-    "highlight": "(Oral)",
+    "venue": "ECCV 2026",
+    "year": "2026",
+    "highlight": "",
     "thumbnail": "assets/publications/placeholder/paper-thumb.png",
     "tags": [
-      { "text": "Paper", "link": "#" },
-      { "text": "Code", "link": "#" },
-      { "text": "Project Page", "link": "#" }
-    ]
-  },
-  {
-    "title": "Another Great Research Work on Machine Learning",
-    "authors": "Collaborator A, <strong>Your Name</strong>, Collaborator B",
-    "type": "accepted",
-    "isFirstAuthor": false,
-    "showOnHomepage": true,
-    "featuredOrder": 2,
-    "venue": "NeurIPS 2024",
-    "year": "2024",
-    "highlight": "(Spotlight)",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
-    "tags": [
-      { "text": "Paper", "link": "#" }
-    ]
-  },
-  {
-    "title": "Preprint Example with Demo Preview",
-    "authors": "<strong>Your Name</strong>, Collaborator C, Collaborator D",
-    "type": "preprint",
-    "isFirstAuthor": true,
-    "showOnHomepage": false,
-    "venue": "Under Review",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
-    "tags": [
-      { "text": "Paper", "link": "#" },
-      { "text": "Code", "link": "#" }
+      { "text": "Paper", "link": "https://link.springer.com/chapter/10.1007/978-3-032-37255-0_12" },
+      { "text": "Code", "link": "https://github.com/guoxf304/CubeSplat" }
     ]
   }
 ]
