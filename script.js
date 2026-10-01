@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setupMobileMenu();
     setupSmoothScroll();
     setupNavHighlight();
+    setupPageReveal();
+    setupNavGlass();
     makeAllLinksOpenInNewTab();
     setupLinkObserver();
 
@@ -14,6 +16,56 @@ document.addEventListener('DOMContentLoaded', function() {
     loadHonors();
     loadPublications();
 });
+
+function setupPageReveal() {
+    const items = [
+        document.querySelector('.profile-card'),
+        ...document.querySelectorAll('.content-column > section:not(.hidden)')
+    ].filter(Boolean);
+
+    if (!items.length) {
+        return;
+    }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+        items.forEach(item => item.classList.add('reveal-visible'));
+        return;
+    }
+
+    items.forEach((item, index) => {
+        item.style.setProperty('--reveal-delay', `${Math.min(index, 5) * 110}ms`);
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            entry.target.classList.add('reveal-visible');
+            observer.unobserve(entry.target);
+        });
+    }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -8% 0px'
+    });
+
+    items.forEach(item => observer.observe(item));
+}
+
+function setupNavGlass() {
+    const nav = document.querySelector('.top-nav');
+    if (!nav) {
+        return;
+    }
+
+    const updateNavGlass = () => {
+        nav.classList.toggle('is-scrolled', window.pageYOffset > 8);
+    };
+
+    window.addEventListener('scroll', updateNavGlass, { passive: true });
+    updateNavGlass();
+}
 
 function setupMobileMenu() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
