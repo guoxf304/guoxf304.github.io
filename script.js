@@ -88,11 +88,6 @@ function setupNavHighlight() {
             }
         });
 
-        const isAtPageBottom = window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 20;
-        if (isAtPageBottom) {
-            currentSection = 'educations';
-        }
-
         const currentNav = sectionToNav[currentSection] || currentSection;
 
         navLinks.forEach(link => {
