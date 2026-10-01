@@ -88,9 +88,12 @@ function setupNavHighlight() {
             }
         });
 
-        const currentNav = window.pageYOffset < 40
-            ? 'homepage'
-            : (sectionToNav[currentSection] || currentSection);
+        const isAtPageBottom = window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 20;
+        if (isAtPageBottom) {
+            currentSection = 'educations';
+        }
+
+        const currentNav = sectionToNav[currentSection] || currentSection;
 
         navLinks.forEach(link => {
             link.classList.remove('active');
