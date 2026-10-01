@@ -9,9 +9,10 @@
     "venue": "ECCV 2026",
     "year": "2026",
     "highlight": "",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
+    "thumbnail": "assets/publications/placeholder/CubeSplat.png",
     "tags": [
       { "text": "Paper", "link": "https://link.springer.com/chapter/10.1007/978-3-032-37255-0_12" },
+      { "text": "arXiv", "link": "https://arxiv.org/abs/2609.21347" },
       { "text": "Code", "link": "https://github.com/guoxf304/CubeSplat" }
     ]
   }
